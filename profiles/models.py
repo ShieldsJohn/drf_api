@@ -8,10 +8,13 @@ class Profile(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now_add=True)
     name = models.CharField(max_length=255, blank=True)
-    content = models.TextField(blank=True)
+    bio = models.TextField(blank=True)
     image = models.ImageField(
         upload_to = 'images/', default='../default_profile_api_mjijvr'
     )
+    social_media_link1 = models.URLField(max_length=255, blank=True)
+    social_media_link2 = models.URLField(max_length=255, blank=True)
+
 
     class Meta:
         ordering = ['-created_at']
