@@ -66,6 +66,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '8000-shieldsjohn-drfapi-yiy0xgmnqr3.ws.codeinstitute-ide.net',
     'localhost',
+    'drf-api-cs-8ddd0772a0f2.herokuapp.com',
     ]
 
 CSRF_TRUSTED_ORIGINS = [
