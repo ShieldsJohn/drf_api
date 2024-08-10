@@ -1,0 +1,1 @@
+LIKE_REACTION_TYPE = "like"

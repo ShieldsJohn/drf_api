@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from posts.models import Post
 from reactions.models import Reaction
+from reactions.constants import LIKE_REACTION_TYPE
 
 
 class PostSerializer(serializers.ModelSerializer):
@@ -60,7 +61,7 @@ class PostSerializer(serializers.ModelSerializer):
             'id', 'owner', 'is_owner', 'profile_id',
             'profile_image', 'created_at', 'updated_at',
             'title', 'caption', 'image', 'image_filter',
-            'reaction_id', 'like_count', 'funny_count',
+            'reaction_id', 'like_id', 'like_count', 'funny_count',
              'sad_count', 'cute_count', 'celebrate_count',
              'comments_count',
         ]
