@@ -9,6 +9,7 @@ class PostSerializer(serializers.ModelSerializer):
     profile_id = serializers.ReadOnlyField(source='owner.profile.id')
     profile_image = serializers.ReadOnlyField(source='owner.profile.image.url')
     reaction_id = serializers.SerializerMethodField()
+    like_id = serializers.SerializerMethodField()
     like_count = serializers.ReadOnlyField()
     funny_count = serializers.ReadOnlyField()
     sad_count = serializers.ReadOnlyField()
@@ -42,6 +43,15 @@ class PostSerializer(serializers.ModelSerializer):
                 owner=user, post=obj
             ).first()
             return reaction.id if reaction else None
+        return None
+
+    def get_like_id(self, obj):
+        user = self.context['request'].user
+        if user.is_authenticated:
+            like = Reaction.objects.filter(
+                owner=user, post=obj, reaction_type=LIKE_REACTION_TYPE
+            ).first()
+            return like.id if like else None
         return None
 
     class Meta:
