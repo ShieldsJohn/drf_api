@@ -79,8 +79,7 @@ These are the models in the database of this API:
 - Saved Post.  Custom model to facilitate saving favourite posts.  Has a many to one relationship with User and a one to one relationship with Post.
 - Contact.  Custom model to facilitate a contact form for users to contact Cat Snaps. Has no database relationships.
 
-![entity relationship diagram](/workspace/drf_api/readme_images/erd.png)
-/workspace/drf_api/readme_images/erd.png
+![entity relationship diagram](readme_images/erd.png)
 
 
 ### Create, Read, Update and Delete (CRUD)
@@ -100,4 +99,62 @@ As a result, users of the API can apply the following functionality:
 - Reactions (CRUD)
 - Followers (CRUD)
 - Contact (C)
+
+
+## Features
+
+### Home page
+
+![home page](readme_images/root.png)
+
+
+## Profiles
+
+Users can access this to see a list of the profiles and their respective data, in the API.  There is also the functionality to filter the data by profile or sort in ascending/descending order by posts count, followers count, following count and by the most recent time profiles were followed or create a new follow.
+
+![profile list](readme_images/profiles.png)
+
+
+## Posts
+
+Users can access this to see a list of posts and similarly, filter or search, as shown below.
+
+![posts list](readme_images/posts_list.png)
+
+![posts filter](readme_images/posts_search_filter.png)
+
+
+## Comments
+
+Users can access this to see a list of comments and similarly filter as shown below.  Users can also post a new comment to the database from this screen.
+
+![comments list](readme_images/comments_list.png)
+
+
+## Reactions
+
+Users can access this to see a list of reactions as shown below.  Users can also post a new reaction to the database from this screen.
+
+![reactions list](readme_images/reactions_list.png)
+
+
+## Followers
+
+Users can access this to see a list of followers as shown below.  Users can also post a new follow to the database from this screen.
+
+![followers list](readme_images/followers_list.png)
+
+
+## Saved Posts
+
+Users can access this to see a list of saved posts as shown below.  Users can also post a new saved post to the database from this screen.
+
+![saved posts](readme_images/saved_posts.png)
+
+
+## Contact
+
+Users can access this to see a list of contacts submitted as shown below.  Users can also post a new contact to the database from this screen.
+
+![contact list](readme_images/contact_list.png)
 
