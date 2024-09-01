@@ -228,3 +228,17 @@ I used the Code Institute Python Linter to validate the Python files as below:
 
 I was having issues with displaying the correct reaction counts, I needed a solution to count each reaction, not the total number of reactions.  When researching this on Stack Overflow, I came across Case and When.  I referred to the Django documentation on [conditional expressions](https://docs.djangoproject.com/en/5.0/ref/models/conditional-expressions/) and utilised this in posts/views.py to successfully count each reaction.
 
+
+## Technologies
+
+### Languages
+
+- Python
+
+### Frameworks and other Services
+
+- Django Rest Framework - for building APIs
+- GitHub - for hosting the repository with version control, creating project epics and managing them through the kanban
+- Cloudinary - for hosting images
+- Heroku - for hosting the deployed application
+- Code Institute Python Linter - for Python code validation
