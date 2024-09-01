@@ -52,3 +52,52 @@ The structure of this API project is based on Code Institute's Django Rest Frame
 - As a developer, I would like my users to be able to complete a contact form and for superusers to see a list of these contacts.
 - As a user, I want to able to view and delete a submitted contact form.
 
+
+## Agile
+
+This API was planned using Agile methodology and MoSCoW prioritisation on GitHub Projects.
+
+I created Epics for each feature and broke this down into Sprints, driven by User Stories.   Each User story/feature was prioritised as either Must have, Should have, Could have or Won't have.  Each task was moved through the kanban as the tasks progressed from To Do, In Progress, to Done.
+
+The Epics can be found [here](https://github.com/ShieldsJohn/drf_api/milestones) and the kanban found [here](https://github.com/users/ShieldsJohn/projects/6).
+
+
+## Database
+
+### Models
+
+I struggled to find a free tool which would allow me to accurately depict my database, so I have provided relationships commentary for clarity.
+
+These are the models in the database of this API:
+
+- User.  Per DRF User model.  Has a one to one relationship with Profile, a one to many relationship with Comment, a many to many with Following, a one to many with Reaction and a one to many with Saved Post.
+- Profile.  Customised to include bio and social media links. Has a one to one relationship with User and a one to many with Post.
+- Post. Customised to include captions. Has a many to one relation to Profile, a one to many relationship with Reaction, a one to many relationship with Comment and a one to one relationship with Saved Post.
+- Comment. Per DRF API walkthrough. Has a many to one relationship with User and a many to one relationship with Post.
+- Reaction.  Customised to include reaction type. Has a many to one relation ship with User and a many to one relationship with Post.
+- Following.  Per DRF API walkthrough. Has a many to many relationship with User.
+- Saved Post.  Custom model to facilitate saving favourite posts.  Has a many to one relationship with User and a one to one relationship with Post.
+- Contact.  Custom model to facilitate a contact form for users to contact Cat Snaps. Has no database relationships.
+
+![entity relationship diagram](/workspace/drf_api/readme_images/erd.png)
+/workspace/drf_api/readme_images/erd.png
+
+
+### Create, Read, Update and Delete (CRUD)
+
+This API and its database is designed with CRUD functionality in mind.  The following methods are used to carry out CRUD:
+
+- POST (send data to database to create or update)
+- GET (retrieve data from the database)
+- PUT (update exisiting data, or create new data in database)
+- DELETE (delete data from the database)
+
+As a result, users of the API can apply the following functionality:
+
+- Profiles (CRU)
+- Posts (CRUD)
+- Comments (CRUD)
+- Reactions (CRUD)
+- Followers (CRUD)
+- Contact (C)
+
