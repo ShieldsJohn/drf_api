@@ -158,3 +158,73 @@ Users can access this to see a list of contacts submitted as shown below.  Users
 
 ![contact list](readme_images/contact_list.png)
 
+
+## Testing
+
+Testing was carried out during the development of this API.  As the API is built for the Cat Snaps application, I have manually tested the functionality of the API, through front-end user test cases, which can be found [here](https://github.com/users/ShieldsJohn/projects/6) *REPLACE LINK*
+
+### Code Validation
+
+I used the Code Institute Python Linter to validate the Python files as below:
+
+### Comments
+
+- models.py - no errors found
+- serializers.py - no errors found
+- urls.py - no errors found
+- views.py - no errors found
+
+### Contacts
+
+- models.py - no errors found
+- serializers.py - no errors found
+- urls.py - no errors found
+- views.py - no errors found
+
+### drf_api
+
+- serializers.py - no errors found
+- settings.py - no errors found
+- urls.py - no errors found
+- views.py - no errors found
+
+### Followers
+
+- models.py - no errors found
+- serializers.py - no errors found
+- urls.py - no errors found
+- views.py - no errors found
+
+### Posts
+
+- models.py - no errors found
+- serializers.py - no errors found
+- urls.py
+- views.py
+
+### Profiles
+
+- models.py - no errors found
+- serializers.py - no errors found
+- urls.py - no errors found
+- views.py - no errors found
+
+### Reactions
+
+- models.py - no errors found
+- serializers.py - no errors found
+- urls.py - no errors found
+- views.py - no errors found
+
+### Saved Posts
+
+- models.py - no errors found
+- serializers.py - no errors found
+- urls.py - no errors found
+- views.py - no errors found
+
+
+## Bugs
+
+I was having issues with displaying the correct reaction counts, I needed a solution to count each reaction, not the total number of reactions.  When researching this on Stack Overflow, I came across Case and When.  I referred to the Django documentation on [conditional expressions](https://docs.djangoproject.com/en/5.0/ref/models/conditional-expressions/) and utilised this in posts/views.py to successfully count each reaction.
+
