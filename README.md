@@ -108,14 +108,14 @@ As a result, users of the API can apply the following functionality:
 ![home page](readme_images/root.png)
 
 
-## Profiles
+### Profiles
 
 Users can access this to see a list of the profiles and their respective data, in the API.  There is also the functionality to filter the data by profile or sort in ascending/descending order by posts count, followers count, following count and by the most recent time profiles were followed or create a new follow.
 
 ![profile list](readme_images/profiles.png)
 
 
-## Posts
+### Posts
 
 Users can access this to see a list of posts and similarly, filter or search, as shown below.
 
@@ -124,40 +124,47 @@ Users can access this to see a list of posts and similarly, filter or search, as
 ![posts filter](readme_images/posts_search_filter.png)
 
 
-## Comments
+### Comments
 
 Users can access this to see a list of comments and similarly filter as shown below.  Users can also post a new comment to the database from this screen.
 
 ![comments list](readme_images/comments_list.png)
 
 
-## Reactions
+### Reactions
 
 Users can access this to see a list of reactions as shown below.  Users can also post a new reaction to the database from this screen.
 
 ![reactions list](readme_images/reactions_list.png)
 
 
-## Followers
+### Followers
 
 Users can access this to see a list of followers as shown below.  Users can also post a new follow to the database from this screen.
 
 ![followers list](readme_images/followers_list.png)
 
 
-## Saved Posts
+### Saved Posts
 
 Users can access this to see a list of saved posts as shown below.  Users can also post a new saved post to the database from this screen.
 
 ![saved posts](readme_images/saved_posts.png)
 
 
-## Contact
+### Contact
 
 Users can access this to see a list of contacts submitted as shown below.  Users can also post a new contact to the database from this screen.
 
 ![contact list](readme_images/contact_list.png)
 
+
+### Future Features
+
+- Contact - to fully implement the contact feature to enable the sender to see their sent messages and delivered/read status and for the admin to reply.
+- Notifications - to notify users of any actions on their posts, new followers and responses from sent contact messages etc
+- Direct Messaging - to facilitate deeper social networking between users via a messaging feature.
+  
 
 ## Testing
 
@@ -259,4 +266,53 @@ I was having issues with displaying the correct reaction counts, I needed a solu
 - pytz - ensures proper timezone support in a Django application.
 - requests-oauthlib - used to make HTTP requests with OAuth authorisation, which is often needed for interacting with external APIs that require OAuth authentication.
 - sqlparse - for formatting and handling SQL queries.
-  
+
+
+## Development and Deployment
+
+This API was developed using GitPod and GitHub.  Here are some of the steps taken to develop and deploy.
+
+- In GitHub, navigate to Repositories and select New
+- Select Public
+- Select Code-Institute-Org/ci-full-template
+- Add a repository name
+- Create repository
+
+The following are examples of commands used in GitPod CLI.
+
+- git add .
+- git commit -m "commit message"
+- git push
+- python manage.py runserver
+- python manage.py makemigrations 
+- python manage.py migrate 
+- pip3 freeze --local > requirements.txt
+- pip install -r requirements.txt
+- python manage.py createsuperuser (enter username, email and password)
+- django-admin startproject drf_api .
+- python3 manage.py startapp drf_api
+
+This API is deployed and hosted on Heroku.  I followed these steps during deployment.
+
+- Select Create new app add unique title and select your region. Selecy Create App.
+- Select Settings tab and apply the relevant config VARs
+- Select Deploy tab and select Github
+- Search for the repository title from the GitHub account
+- Select Connect
+- Manually Deploy Main Branch
+- Upon successful deployment, select Open App to view deployed app.
+
+
+## Forking the repository in GitHub
+
+To make a unique copy of a GitHub repository by forking, follow these steps:
+
+- Log in to GitHub
+- Locate the repository to be forked
+- Find the Fork button at the top right-hand side of the page
+- Click on the button to create a copy of the original repository
+
+
+## Credits
+
+- As previously mentioned, this API has been built using Code Institute's 'Django REST Framework' module and customised where appropriate.
