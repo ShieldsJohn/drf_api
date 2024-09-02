@@ -239,6 +239,24 @@ I was having issues with displaying the correct reaction counts, I needed a solu
 
 - Django Rest Framework - for building APIs
 - GitHub - for hosting the repository with version control, creating project epics and managing them through the kanban
-- Cloudinary - for hosting images
 - Heroku - for hosting the deployed application
 - Code Institute Python Linter - for Python code validation
+- asgiref - a dependency of Django to support asynchronous features like async views and middlewares.
+- cloudinary - allows Django applications to upload, store, manage, and serve images, videos, and other media directly to and from Cloudinary.
+- dj-database-url - simplifies database configuration and is useful for deployments where you want to set database URLs via environment variables.
+- dj-rest-auth - for implementation of user authentication, registration, and token management in a Django app.
+- django-allauth - for handling user authentication (including social authentication via Facebook, Google, etc.) in Django.
+- django-cloudinary-storage - facilitates the use of Cloudinary for Django's FileField and ImageField to store and manage media files.
+- django-cors-headers - for setting CORS headers in a Django application to allow or block requests from specific origins, useful for REST APIs and frontend-backend communication.
+- django-filter - adds filtering capabilities to Django REST Framework views, allowing clients to filter data by various fields.
+- djangorestframework-simplejwt - allows a Django REST API to use JWT for user authentication and authorisation.
+- gunicorn - a WSGI server for deploying a Django application.
+- oauthlib - used by libraries for OAuth1 and OAuth2 authentication flows.
+- pillow - allows Django to handle image uploads and processing, such as resizing or converting images.
+- psycopg2 - enables Django to connect to and interact with a PostgreSQL database.
+- PyJWT - used for handling JWT tokens for authentication in Django applications, often with djangorestframework-simplejwt.
+- python3-openid - provides support for OpenID authentication.
+- pytz - ensures proper timezone support in a Django application.
+- requests-oauthlib - used to make HTTP requests with OAuth authorisation, which is often needed for interacting with external APIs that require OAuth authentication.
+- sqlparse - for formatting and handling SQL queries.
+  
