@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from posts.models import Post
 
+
 class Reaction(models.Model):
     """
     unique_together - ensures a user can't react the same way to the same post twice
@@ -27,4 +28,3 @@ class Reaction(models.Model):
 
     def __str__(self):
         return f'{self.owner} reacted {self.reaction_type} to {self.post}'
-        

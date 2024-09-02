@@ -81,7 +81,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '8000-shieldsjohn-drfapi-yiy0xgmnqr3.ws.codeinstitute-ide.net',
     'localhost',
-     os.environ.get('ALLOWED_HOST'),
+    os.environ.get('ALLOWED_HOST'),
     ]
 
 CSRF_TRUSTED_ORIGINS = [
@@ -117,7 +117,7 @@ INSTALLED_APPS = [
     'followers',
     'contact',
     'saved_posts',
-    
+
 ]
 
 SITE_ID = 1
@@ -179,25 +179,20 @@ else:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
     }
-    
 
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    {'NAME': 'django.contrib.auth.password_validation.'
+        'UserAttributeSimilarityValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.'
+        'MinimumLengthValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.'
+        'CommonPasswordValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.'
+        'NumericPasswordValidator'},
 ]
 
 

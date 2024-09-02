@@ -17,4 +17,3 @@ class ContactSerializer(serializers.ModelSerializer):
             return {"detail": "Please sign in to contact us."}
         else:
             return super().user_authentication(instance)
-            

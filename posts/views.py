@@ -14,15 +14,20 @@ class PostList(generics.ListCreateAPIView):
     serializer_class = PostSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Post.objects.annotate(
-        like_count=Count(Case(When(reactions__reaction_type='like', then=1),
+        like_count=Count(Case(When(
+            reactions__reaction_type='like', then=1),
         output_field=IntegerField()), distinct=True),
-        funny_count=Count(Case(When(reactions__reaction_type='funny', then=1),
+        funny_count=Count(Case(When(
+            reactions__reaction_type='funny', then=1),
         output_field=IntegerField()), distinct=True),
-        sad_count=Count(Case(When(reactions__reaction_type='sad', then=1),
+        sad_count=Count(Case(When(
+            reactions__reaction_type='sad', then=1),
         output_field=IntegerField()), distinct=True),
-        cute_count=Count(Case(When(reactions__reaction_type='cute', then=1),
+        cute_count=Count(Case(When(
+            reactions__reaction_type='cute', then=1),
         output_field=IntegerField()), distinct=True),
-        celebrate_count=Count(Case(When(reactions__reaction_type='celebrate', then=1),
+        celebrate_count=Count(Case(When(
+            reactions__reaction_type='celebrate', then=1),
         output_field=IntegerField()), distinct=True),
 
         comments_count=Count('comment', distinct=True)
@@ -66,15 +71,20 @@ class PostDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = PostSerializer
     permission_classes = [IsOwnerOrReadOnly]
     queryset = Post.objects.annotate(
-        like_count=Count(Case(When(reactions__reaction_type='like', then=1),
+        like_count=Count(Case(When(
+            reactions__reaction_type='like', then=1),
         output_field=IntegerField()), distinct=True),
-        funny_count=Count(Case(When(reactions__reaction_type='funny', then=1),
+        funny_count=Count(Case(When(
+            reactions__reaction_type='funny', then=1),
         output_field=IntegerField()), distinct=True),
-        sad_count=Count(Case(When(reactions__reaction_type='sad', then=1),
+        sad_count=Count(Case(When(
+            reactions__reaction_type='sad', then=1),
         output_field=IntegerField()), distinct=True),
-        cute_count=Count(Case(When(reactions__reaction_type='cute', then=1),
+        cute_count=Count(Case(When(
+            reactions__reaction_type='cute', then=1),
         output_field=IntegerField()), distinct=True),
-        celebrate_count=Count(Case(When(reactions__reaction_type='celebrate', then=1),
+        celebrate_count=Count(Case(When(
+            reactions__reaction_type='celebrate', then=1),
         output_field=IntegerField()), distinct=True),
 
         comments_count=Count('comment', distinct=True)

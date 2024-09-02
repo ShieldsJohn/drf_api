@@ -7,8 +7,10 @@ class SavedPost(models.Model):
     """
     Model for users to save favourite posts by other users
     """
-    owner = models.ForeignKey(User, related_name='saved_posts', on_delete=models.CASCADE)
-    post = models.ForeignKey(Post, related_name='saved_by', on_delete=models.CASCADE)
+    owner = models.ForeignKey(
+        User, related_name='saved_posts', on_delete=models.CASCADE)
+    post = models.ForeignKey(
+        Post, related_name='saved_by', on_delete=models.CASCADE)
     saved_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:

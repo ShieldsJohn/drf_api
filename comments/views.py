@@ -23,9 +23,8 @@ class CommentList(generics.ListCreateAPIView):
 
 class CommentDetail(generics.RetrieveUpdateDestroyAPIView):
     """
-    Retrieve, update or delete your comment by id 
+    Retrieve, update or delete your comment by id
     """
     permission_classes = [IsOwnerOrReadOnly]
     serializer_class = CommentDetailSerializer
     queryset = Comment.objects.all()
-    
