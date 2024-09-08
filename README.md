@@ -1,11 +1,11 @@
 # Cat Snaps API
 
-This is the back-end API used by the React application, [Cat Snaps](https://github.com/ShieldsJohn/cat-snaps)
+This is the back-end [API](https://drf-api-cs-8ddd0772a0f2.herokuapp.com/) used by the React application, [Cat Snaps](https://github.com/ShieldsJohn/cat-snaps)
 
 
 ## Project Aim
 
-The aim of this API is provide database CRUD and user authentication functionality to Cat Snaps (insert deployed link) - a photo-sharing social media site, including features such as user profiles, posting images, commenting on and reacting to posts and following other users.
+The aim of this API is provide database CRUD and user authentication functionality to Cat Snaps - a photo-sharing social media site, including features such as user profiles, posting images, commenting on and reacting to posts and following other users.
 
 
 
@@ -168,7 +168,7 @@ Users can access this to see a list of contacts submitted as shown below.  Users
 
 ## Testing
 
-Testing was carried out during the development of this API.  As the API is built for the Cat Snaps application, I have manually tested the functionality of the API, through front-end user test cases, which can be found [here](https://github.com/users/ShieldsJohn/projects/6) *REPLACE LINK*
+Testing was carried out during the development of this API.  As the API is built for the Cat Snaps application, I have manually tested the functionality of the API, through front-end user test cases, which can be found [here](https://github.com/ShieldsJohn/cat-snaps/blob/main/README.md).
 
 ### Code Validation
 
